@@ -29,12 +29,36 @@
     </section>
 
     <img src="dice-5.png" alt="Playing dice" class="dice" />
-    <button class="btn--rules">📍 Game rules</button>
+    <button class="btn--rules show-modal">📍 Game rules</button>
     <button class="btn btn--new">🔄 New game</button>
     <button class="btn btn--roll">🎲 Roll dice</button>
     <button class="btn btn--hold">📥 Hold</button>
   </main>
+
+
+  <!-- Game Rules Modal Window  -->
+  <div class="modal hidden">
+    <button class="close-modal">&times;</button>
+    <h1>Gameplay</h1>
+    <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+    <ul>
+      <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+      <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+      <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's
+        turn.</li>
+    </ul>
+    <p>The first player to score 50 or more points wins.</p>
+    <p>For example, the first player, Donald, begins a turn with a roll of 5. Donald could hold and score 5 points, but
+      chooses to roll again. Donald rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again.
+      Donald rolls a 1, and must end his turn without scoring. The next player, Alexis, rolls the sequence 4-5-3-5-5,
+      after which she chooses to hold, and adds her turn total of 22 points to her score.</p>
+  </div>
+  <div class="overlay hidden"></div>
+
+
+
   <script src="script.js"></script>
+  <script src="gameplay.js"></script>
 </body>
 
 </html>
